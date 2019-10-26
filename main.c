@@ -1,5 +1,12 @@
 #include <stdio.h>
 int main(){
+	
+	/* Autor: Alejandro Garcia Luis
+	Fecha: 25/Agosto/2019
+	Grupo: 
+	Horario: Sábados 9-11 am
+	Matrícula: 1846616 */
+	
 	float x;
 	//estas variables son para identificar el resultado de cada ecuación//
 	float a,b,c,d;
@@ -10,13 +17,19 @@ int main(){
 	
 	//ecuación 1//
 	a=((x-1)/4)-((x-5)/36);
-	printf("El resultado es %f",a);
+	printf("El resultado es %f \n",a);
 	
 	//ecuación 2//
-	b=(((x+1)/8)-((2*x-3)/16))*6;
-	printf("El resultado es %f",b);
+	b=6*(((x+1)/8)-((2*x-3)/16));
+	printf("El resultado es %f \n",b);
 	
 	//ecuación 3//
-	c=((x-((x-2)/3))*(2/3))+1;
-	printf("El resultado es %f",c);
+	c=(2/3)*(x-(1-((x-2)/3)))+1;
+	printf("El resultado es %f \n",c);
+	
+	//ecuacion 4//
+	d=2-((-2*(x+1))- ((x-3)/2));
+	printf("El resultado es %f \n",d);
+	
+	return 0;
 }
