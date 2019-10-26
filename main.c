@@ -1,52 +1,63 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <locale.h>
-/*Alejandro García Luis
-  26/10/2019
-  Grupo 008
-  Sabddos 9-11 am
-  1846616 */
-int primo(int n, int x){
-	x=n%2;
-	return primo;	
+	/* Alejandro García Luis
+	   08/10/2019
+	   Grupo 008
+	   Sabados 9am-11am
+	   1846616*/
+	   
+int primo(int n) {
+	if(n<1)
+	return 0;
+
+	int i,x,ban;
+	ban=1;
+	x=n/2;
+	
+	for(i=2; i<=x; i++){
+		if(n%i==0) {
+			ban= 0;
+			break;
+		}
+	}
+
+	return ban;
 }
 
-int potencia(b,e){
-    int potencia=b,i;
-    for(i=0;i<=e;i++){
-    	potencia*=potencia;
-    }
-    return potencia;
+int potencia(int a,int exp){
+	int i, e;
+	e=a;
+	for(i=1; i<exp; i++){
+		e=e*a;
+	}
+	return e;
 }
 
 int main(){
 	setlocale(LC_ALL,"spanish");
-	printf("\t******ACTIVIDAD 1******\n\n");
-	int n,i,primo,x;
-	
-	printf("Ingrese un número \n");
+	printf("******ACTIVIDAD 1******\n\n");
+
+	int n,a,exp;
+
+	printf("Ingrese el numero:\n");
 	scanf("%d",&n);
-	
 	if(n>0){
-		if(primo==1){
-			printf("El número es primo \n\n\n");
+		if (primo(n)){
+			printf("El número es primo \n\n");
 		}else{
-			printf("El número no es primo \n\n\n");
+			printf("El número no es primo \n\n");
 		}
 	}else{
-		printf("Número no válido \n\n\n");
+		printf("Número no válido \n");
 	}
-	
-	
-	printf("\t******ACTIVIDAD 2******\n");
-	int b /*base*/, e/*exponente*/;
+	printf("******ACTIVIDAD 2******\n\n");
+	printf("Ingrese el número a elevar:\n");
+	scanf("%d", &a);
+	printf("Ingrese el número al que se elevará el valor anterior \n");
+	scanf("%d", &exp);
 
-	printf("Ingrese el número a elevar \n");	
-	scanf("%d",&b);
-	printf("Ingrese a que número se va a elevar \n");
-	scanf("%d",&e);
+	printf("%d^%d=%d \n",a,exp,potencia(a,exp));
 	
-	
-	printf("El resultado de elevar %d a su %d potencia es %d",b,e,potencia);
 return 0;
 }
+
