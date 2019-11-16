@@ -1,0 +1,2 @@
+La cadena al revés es:
+	odnum aloh
